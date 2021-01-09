@@ -1,6 +1,7 @@
 const express = require('express');
 
 const app = express();
+const port = process.env.PORT || 3421;
 const nav = [
     {
         link:'./signup',name:'Sign Up'
@@ -50,4 +51,4 @@ app.get('/',function(req,res){
 });
 
 
-app.listen(3421);
+app.listen(port,()=>{console.log("Server Ready at"+port)});
